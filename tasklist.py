@@ -13,7 +13,7 @@ def process_json_data():
     if not request.is_json:
         return jsonify({"wrong": "You need to use json"}), 400
 
-    data = request.het_json()
+    data = request.get_json()
 
     end_time = time.time()
     processing_time = (end_time - start_time) * 1000
